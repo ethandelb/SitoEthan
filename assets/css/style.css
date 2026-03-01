@@ -1,0 +1,53 @@
+/* --- PALETTE DI COLORI--- */
+:root{
+    --primary-color: blue;
+    --secondary-color: black;
+    --accent-color: red;
+    --bg-light: cyan;
+    --text-dark: grey;
+    --text-muted: green;
+    --white: white;
+
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+/* --- Roba utile --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Per far scivolare il sito quando clicchi sui link */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%; /* Evita che le immagini escano dai bordi */
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+
+
+/* --- FOOTER --- */
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
