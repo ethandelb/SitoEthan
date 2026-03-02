@@ -1,17 +1,20 @@
 /* --- PALETTE DI COLORI--- */
 :root{
-    --primary-color: blue;
-    --secondary-color: black;
-    --accent-color: red;
-    --bg-light: cyan;
+    --primary-color: rgba(25, 36, 141, 0.956);
+    --secondary-color: rgba(43, 43, 43, 0.703);
+    --accent-color: rgb(89, 0, 255);
+    --bg-light: rgb(18, 34, 72);
     --text-dark: grey;
+    --text-light: rgb(255, 255, 255);
     --text-muted: green;
     --white: white;
+    --hover-color: rgba(22, 40, 207, 0.8);
 
-    --radius: 8px;
+    --radius: 26px;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
+
 /* --- Roba utile --- */
 * {
     margin: 0;
@@ -20,7 +23,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Per far scivolare il sito quando clicchi sui link */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +34,7 @@ body {
 }
 
 img {
-    max-width: 100%; /* Evita che le immagini escano dai bordi */
+    max-width: 100%;
     display: block;
 }
 
@@ -41,13 +44,231 @@ a {
     transition: var(--transition);
 }
 
+h2 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+h3 {
+    color: var(--text-light);
+    font-size: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
 
+/* ==============================
+   CONTAINER
+============================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,0,0,0.7);
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero_photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 9rem 2rem;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: var(--white);
+}
+
+/* ==============================
+   SEZIONE FEATURES
+============================== */
+.features {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    margin-bottom: 4rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.feature-content {
+    flex:1;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 3rem;
+    padding-top:3rem;
+    
+}
+
+.feature-card img {
+    height: 100%;
+    width: 450px;
+    margin-left: 0;   
+    object-fit: cover;
+
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.351);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.feature-card p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* ==============================
+   CONTENT SECTION
+============================== */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.content-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.content-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.content-item h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.content-item p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+/* ==============================
+   CONTACT FORM
+============================== */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
 
 /* --- FOOTER --- */
-.footer{
-    background-color: #333;
-    color: white;
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
     padding: 20px;
     text-align: center;
     margin-top: 50px;
+    border-radius: var(--radius);
 }

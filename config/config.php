@@ -12,7 +12,7 @@ define('BASE_URL', ''); // Utile per i link assoluti
 
 // 3. Configurazione Database (per quando lo attiverai)
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'nome_database');
+define('DB_NAME', 'prova');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
