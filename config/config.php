@@ -26,3 +26,24 @@ if (file_exists('DataBase/db.php')) {
 function e($string) {
     return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 }
+// Simulazione dati dal Database
+$hero_data = [
+    "title" => "Ethan Del Biaggio",
+    "subtitle" => "Sviluppo web artigianale: codice puro e performance elevate.",
+    "btn_text" => "Scopri di più",
+    "bg_img" => "assets/img/hero_photo.jpg"
+];
+
+$services = [
+    [
+        "title" => "Siti Personalizzati",
+        "desc" => "Realizzo soluzioni web partendo da un foglio bianco...",
+        "img" => "assets/img/service1.jpg"
+    ],
+    [
+        "title" => "Restyling & Modernizzazione",
+        "desc" => "Trasformo siti obsoleti in strumenti moderni e sicuri...",
+        "img" => "assets/img/service2.jpg"
+    ]
+];
+?>
