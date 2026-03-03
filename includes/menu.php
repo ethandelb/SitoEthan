@@ -2,7 +2,7 @@
     <a class="navbar-brand" href="index.php">Ethan Del Biaggio</a>
     
     <button class="navbar-toggler" id="mobile-menu-btn">
-        ☰
+
     </button>
 
     <ul class="navbar-nav" id="nav-menu">

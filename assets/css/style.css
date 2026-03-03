@@ -11,6 +11,7 @@
     --text-muted: #a8a8a8; /* Reso un grigio chiaro invece di "green" per coerenza visiva */
     --white: #ffffff;
     --hover-color: rgba(22, 40, 207, 0.8);
+    --glass-blur: rgba(38, 39, 47, 0.6);
 
     --radius: 20px; /* Leggermente ridotto per un look più moderno */
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -101,7 +102,7 @@ section {
     width: 90%;
     align-items: center;
     z-index: 1000;
-    background: rgba(38, 39, 47, 0.6);
+    background: var(--glass-blur);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -111,6 +112,7 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow);
 }
+
 
 .navbar-brand {
     font-size: 1.5rem;
@@ -129,7 +131,58 @@ section {
     padding: 0.5rem 1rem;
     border-radius: var(--radius);
 }
+/* --- STILE SOLA ICONA HAMBURGER --- */
+#mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    display: none;
+    font-size: 0; /* Nasconde il carattere ☰ */
+    padding: 0;
+}
 
+/* Linea superiore e centrale (creata con box-shadow) */
+#mobile-menu-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: var(--transition);
+    /* La box-shadow crea la linea in mezzo */
+    box-shadow: 0 9px 0 var(--white); 
+}
+
+/* Linea inferiore */
+#mobile-menu-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* --- ANIMAZIONE IN "X" (Richiede classe .open aggiunta via JS) --- */
+#mobile-menu-btn.open::before {
+    box-shadow: none; /* Sparisce la linea centrale */
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+#mobile-menu-btn.open::after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+}
 .nav-link:hover {
     background-color: rgba(102, 102, 102, 0.25);
     color: var(--white);
@@ -199,7 +252,7 @@ section {
 }
 
 .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--glass-blur);
     color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -324,7 +377,7 @@ section {
 .form-input {
     width: 100%;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--white);
     border-radius: 12px;
@@ -383,6 +436,10 @@ section {
 @media (max-width: 864px) {
     /* Navbar Hamburger */
     .navbar-toggler { display: block; }
+    #mobile-menu-btn {
+        display: block; /* MODIFICATO: Mostra solo su mobile */
+        z-index: 1001; /* Assicura che l'icona stia sopra al menu a tendina */
+    }
     
     .navbar-nav {
         display: none;
@@ -391,11 +448,17 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--bg-light);
         padding: 1.5rem;
         border-radius: var(--radius);
         margin-top: 10px;
         box-shadow: var(--shadow);
+        background: var(--glass-blur);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #nav-menu.active {
+        display: flex !important;
     }
 
     .navbar-nav.active { display: flex; }
