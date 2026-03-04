@@ -10,6 +10,7 @@
         <li><a class="nav-link" href="#servizi">servizi</a></li>
         <li><a class="nav-link" href="#about">Chi sono</a></li>
         <li><a class="nav-link" href="#contatti">Contatti</a></li>
+        <li><a class="nav-link" href="actions/messages.php">Messaggi</a></li>
         <?php if (isset($_SESSION['username'])) : ?>
             <li><a href="actions/closeSession.php" class="btn-secondary">Logout</a></li>
         <?php endif; ?>

@@ -263,6 +263,89 @@ section {
     transform: translateY(-3px);
 }
 
+/* Cards */
+.dashboard-container {
+    margin-top: 100px;
+}
+.header{
+    text-align: center;
+    margin-top: 1rem;
+}
+.message-card {
+                background: var(--glass-blur);
+                border: 1px solid rgba(50, 50, 50, 0.747);
+                border-radius: var(--radius);
+                margin: 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                overflow: hidden; /* Importante per l'animazione */
+            }
+
+            /* Intestazione cliccabile (Nome ed Email) */
+            .message-header {
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+
+            .message-header:hover {
+                background-color: #363636d7;
+            }
+
+            .message-info strong {
+                display: block;
+                font-size: 1.1rem;
+                color: var(--text-light);
+                margin-bottom: 0.2rem;
+            }
+
+            .message-info span {
+                font-size: 0.9rem;
+                color: var(--text-muted);
+            }
+
+            /* L'icona "+" che ruota */
+            .toggle-icon {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--text-muted);
+                transition: transform 0.3s ease;
+            }
+
+            /* Corpo del messaggio (Nascosto di default) */
+            .message-body {
+                /* Trucco CSS moderno per animare l'altezza in modo fluido */
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: grid-template-rows 0.3s ease;
+                background-color: var(--glass-blur);
+                border-top: 1px solid transparent;
+            }
+
+            .message-body-inner {
+                overflow: hidden;
+                padding: 0 1.5rem; /* Padding laterale fisso, verticale gestito nel JS/CSS */
+            }
+
+            .message-text {
+                padding: 1.5rem 0;
+                line-height: 1.6;
+                color: var(--text-light)
+            }
+
+            /* --- STATO ATTIVO (Quando clicchi) --- */
+            .message-card.expanded .message-body {
+                grid-template-rows: 1fr;
+                border-top-color: rgba(50, 50, 50, 0.747);
+            }
+
+            .message-card.expanded .toggle-icon {
+                transform: rotate(45deg); /* Il "+" diventa una "x" */
+                color: var(--accent);
+            }
+
 /* Feature Cards (I miei servizi) */
 .features-grid {
     display: flex;

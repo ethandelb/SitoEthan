@@ -62,7 +62,7 @@ include("includes/menu.php");
             <h2 class="section-title">Contattaci</h2>
         </div>
 
-        <form action="#" method="post" class="contact-form fade-in-section">
+        <form action="actions/contact.php" method="post" class="contact-form fade-in-section">
             <div class="form-group">
                 <label for="name">Nome</label>
                 <input type="text" id="name" name="name" class="form-input" required>
