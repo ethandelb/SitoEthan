@@ -9,3 +9,10 @@ if(isset($_POST["name"])){
 
 $stmt = $conn->prepare("INSERT INTO messaggi (nome, email, messaggio) VALUES (?, ?, ?)");
 $stmt->execute([$nome,$email,$mess]);
+$body = "Nome: $nome\nEmail: $email\nMessaggio:\n$mess";
+$subject = "Nuovo messaggio ricevuto";
+mail(SITE_EMAIL, $subject,$body);
+
+header("Location: " . $_SERVER['HTTP_REFERER']);
+exit();
+?>

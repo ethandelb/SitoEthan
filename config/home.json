@@ -1,0 +1,19 @@
+[
+    {
+    "type": "hero.php",
+    "title": "Ethan Del Biaggio",
+    "subtitle": "Sviluppo web artigianale: codice puro, performance elevate e soluzioni su misura."
+  },
+  {
+    "type": "services.php"
+  },
+  {
+    "type": "about.php",
+    "description_1": "Il mio interesse per l'informatica è iniziato molto presto, ma è durante gli studi al Liceo di Bellinzona che ho deciso di trasformare questa passione in una competenza concreta. Oltre al percorso scolastico ordinario, ho scelto di approfondire il mondo dello sviluppo web e della Cybersecurity, frequentando corsi specialistici per imparare non solo a 'costruire' il web, ma a renderlo sicuro. Questo mix di studi classici e formazione tecnica mi permette di avere un approccio analitico e critico in ogni progetto: non mi limito a far funzionare il codice, cerco di capire la logica profonda che c'è dietro ogni sistema.",
+    "description_2": "Nella pratica, mi occupo di sviluppo Full-Stack focalizzato sulle prestazioni. Ho imparato a padroneggiare i linguaggi fondamentali del web, come HTML5 e CSS3, per creare interfacce moderne e responsive che si adattano a ogni dispositivo. Lato backend, utilizzo PHP e database SQL per gestire la logica del sito e la sicurezza dei dati. Il mio metodo di lavoro si basa sull'uso di strumenti professionali come VS Code, Git e ambienti di test locali, garantendo che ogni riga di codice sia scritta su misura, evitando i limiti dei comuni costruttori di siti automatici.",
+    "description_3": "Parallelamente allo sviluppo, ho applicato le mie conoscenze di sicurezza informatica per proteggere i progetti che realizzo. So come implementare difese contro le vulnerabilità più comuni, come la SQL Injection e gli attacchi XSS, utilizzando tecniche moderne di sanitizzazione dei dati e hashing delle password. Ho già lavorato alla rimodernizzazione di siti esistenti, passando da semplici pagine statiche a piattaforme dinamiche dotate di aree amministrative protette. Questo mi permette di offrire soluzioni complete: dalla progettazione grafica iniziale fino alla messa in sicurezza definitiva del server."
+  },
+  {
+    "type": "contact.php"
+  }
+]
