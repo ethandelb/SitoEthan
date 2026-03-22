@@ -205,14 +205,14 @@ section {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    margin-bottom: 1.25rem;     
     animation: fadeInUp 0.8s ease forwards;
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    color: var(--text-muted);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: var(--text-light);
     margin-bottom: 2.5rem;
     max-width: 700px;
     margin-inline: auto;
@@ -243,6 +243,7 @@ section {
 .btn-primary {
     background-color: var(--accent-color);
     color: var(--white);
+    align-items: center;
 }
 
 .btn-primary:hover {
@@ -391,7 +392,7 @@ section {
 
 .feature-desc {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-light);
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
@@ -425,6 +426,16 @@ section {
 .content-desc {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+}
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .about_content {
@@ -473,6 +484,11 @@ section {
     border-color: var(--accent-color);
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 0 4px rgba(89, 0, 255, 0.2);
+}
+button.contact-btn{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Footer */

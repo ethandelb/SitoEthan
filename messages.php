@@ -2,11 +2,11 @@
 require_once("config/config.php");
 require_once("DataBase/db.php");
 
+include("admin/admin_auth.php");
 include("includes/header.php");
 include("includes/menu.php");
 
-// ⚠️ CORREZIONE: Ho aggiunto 'messaggio' alla SELECT. 
-// (Assicurati che il nome della colonna nel tuo DB sia corretto!)
+
 $messages = $conn->query("SELECT nome, email, messaggio FROM messaggi");
 ?>
 
