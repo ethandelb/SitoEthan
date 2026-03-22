@@ -1,6 +1,7 @@
 <?php
 require_once "config/config.php";
-include("includes/header.php")
+include("includes/header.php");
+include("includes/menu.php");
 
 ?>
   <section class="contact" >

@@ -424,7 +424,7 @@ section {
 }
 
 .content-desc {
-    color: var(--text-muted);
+    color: var(--text-light);
     margin-bottom: 1.5rem;
 }
 .about-me {
@@ -446,6 +446,17 @@ section {
     box-shadow: var(--shadow); 
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
+.double-button{
+    display: flex;
+    gap: clamp(1rem,1vw,2rem);
+}
+.double-button.btn-primary{
+    flex: 1;
+    font-size: clamp(0.85rem,3vw,1.5rem);
+    padding: 1rem;
+    height: clamp(2.5rem,8vw,4rem);
+}
+
 /* Contact Form */
 .contact-form {
     max-width: 700px;
@@ -486,6 +497,7 @@ section {
     box-shadow: 0 0 0 4px rgba(89, 0, 255, 0.2);
 }
 button.contact-btn{
+    font-size: 1.5rem;
     width: 100%;
     margin: 0 auto;
     display: block;
