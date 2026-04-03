@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // 2. Impostazioni del Sito (Costanti)
 // Usare le costanti (define) è meglio delle variabili perché non possono essere cambiate per errore
-define('SITE_NAME', 'Ethan Del Biaggio');
+define('SITE_NAME', 'Ethan Del Biaggio | Siti web Ticino');
 define('SITE_EMAIL', 'ethan@delbiaggio.ch');
 define('BASE_URL', ''); // Utile per i link assoluti
 

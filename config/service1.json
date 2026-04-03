@@ -1,0 +1,14 @@
+[
+    {
+    "type": "service_hero.php",
+    "title": "Creazione di Siti Web da zero",
+    "subtitle": "Creazione tramite codice PHP, HTML e JavaScript di siti responsive adatti ad aziende e business di tutti i tipi"
+  },
+  {
+    "type" : "info_cards.php",
+    "title2": "Metodologia e tecnologie utilizzate",
+    "desc2" : "Ogni progetto viene sviluppato partendo da un’analisi delle esigenze, definendo struttura, funzionalità e obiettivi del sito. Il processo include la progettazione dell’architettura delle pagine, lo sviluppo del frontend e l’integrazione della logica backend tramite PHP. Lavoro direttamente sul codice per garantire una struttura chiara, facilmente espandibile e priva di elementi superflui. Questo approccio permette di ottenere un sito leggero, stabile e adattabile nel tempo, senza vincoli legati a piattaforme esterne.",
+    "title1" : "Progettazione e sviluppo delle idee",
+    "desc1" : "Il lavoro parte dalla definizione degli obiettivi del sito: presentazione, acquisizione clienti o gestione contenuti. In base a questo, costruisco una soluzione su misura che include struttura delle pagine, navigazione intuitiva e funzionalità essenziali. Il risultato è un sito progettato per funzionare in modo semplice ed efficace, sia per chi lo utilizza sia per chi lo gestisce."
+  }
+]

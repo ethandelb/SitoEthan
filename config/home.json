@@ -1,12 +1,24 @@
 [
     {
     "type": "hero.php",
-    "title": "Sviluppo siti web professionali in Ticino",
-    "subtitle": "Creo siti web moderni, veloci e sicuri, su misura per le tue esigenze. Portfolio reale e soluzioni complete.",
+    "title": "Realizzazione siti web professionali in Ticino",
+    "subtitle": "Aiuto aziende e professionisti in Ticino a ottenere più clienti online grazie a siti web veloci, moderni e ottimizzati.",
     "button": "Richiedi un sito web oggi"
   },
+   {
+    "type" : "start_info.php",
+    "title1": "Siti web in Ticino per aziende e professionisti",
+    "desc1" : "Offro servizi di sviluppo siti web in Ticino per aziende, liberi professionisti e attività locali che vogliono migliorare la propria presenza online. Ogni sito viene progettato su misura per garantire velocità, sicurezza e facilità di utilizzo.",
+    "desc2" : "Realizzo siti web moderni e ottimizzati per i motori di ricerca (SEO), ideali per chi desidera ottenere più clienti online. Opero in tutto il Ticino, inclusi Lugano, Bellinzona e Mendrisio."
+  },
   {
-    "type": "services.php"
+    "type" : "services.php",
+    "title1": "Creazione di siti personalizzati da zero",
+    "desc1" : "Realizzo siti web professionali su misura per aziende e professionisti in Ticino. Ogni progetto è progettato per essere veloce, moderno e facile da usare, con l’obiettivo di migliorare la tua presenza online e attirare nuovi clienti. Utilizzo le ultime tecnologie per garantire un sito performante e ottimizzato per i motori di ricerca.",
+    "title2" : "Modernizzazione di siti esistenti",
+    "desc2" : "Hai già un sito web ma non ti porta risultati? Mi occupo di rinnovare completamente il tuo sito, migliorando design, velocità e usabilità, per trasformarlo in uno strumento efficace per la tua attività. Aggiorno il codice, ottimizzo le prestazioni e implemento le migliori pratiche SEO per aumentare la visibilità online e attrarre più clienti.",
+    "title3" : "Sicurezza e ottimizzazione SEO",
+    "desc3" : "Ottimizzo il tuo sito web per i motori di ricerca (SEO) per aumentare la visibilità online e attirare più visitatori. Inoltre, implemento sistemi di sicurezza per proteggere i dati e garantire un funzionamento affidabile nel tempo. Utilizzo tecniche avanzate per prevenire vulnerabilità comuni e mantenere il tuo sito sicuro contro minacce informatiche."
   },
   {
     "type": "about.php",

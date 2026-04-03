@@ -191,7 +191,7 @@ section {
 /* --- HERO SECTION --- */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(13, 16, 22, 0.602), rgba(8, 10, 15, 0.34)), url('../img/hero_photo.jpg');
+    background: linear-gradient(rgba(13, 16, 22, 0.602), rgba(8, 10, 15, 0.34)), url('../img/hero_photo.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -211,7 +211,7 @@ section {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
     color: var(--text-light);
     margin-bottom: 2.5rem;
     max-width: 700px;
@@ -225,13 +225,129 @@ section {
     opacity: 0; /* Partenza per animazione */
 }
 
+/* START BLOCK */
+.start-block-title {
+    flex: 1; /* Occupano il 50% ciascuno */
+    width: 50%;
+}
+
+/* ==============================
+   INFO FULL-WIDTH BLOCKS
+============================== */
+
+/* 1. Impostazioni base della sezione (A TUTTA LARGHEZZA) */
+.info-block-section {
+    width: 100%;
+    /* Reset dei padding globali delle section per controllare il layout internamente */
+    padding: 0 !important; 
+    max-width: none !important; 
+    margin: 0 !important;
+    margin-top: 5rem !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* 2. Definizione degli sfondi alternati coerenti con la palette */
+.alt-bg-light {
+    background-color: var(--primary-color); /* Il blu scuro di base */
+}
+
+.alt-bg-dark {
+    /* Usiamo il colore secondario o il glass-blur per staccare */
+    background-color: var(--secondary-color); 
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 3. Il contenitore interno che limita la larghezza del testo (come il tuo container-width) */
+.info-block-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-right: 4rem;
+    padding-left: 4rem; /* Padding verticale generoso per dare respiro */
+    gap: clamp(2rem, 10vw, 100rem);
+}
+
+/* 4. Layout Flex delle due parti */
+.info-block-image,
+.info-block-content {
+    flex: 1; /* Occupano il 50% ciascuno */
+    width: 60%;
+}
+
+/* 5. Stile Immagine */
+.info-block-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius); /* Manteniamo i bordi arrotondati coerenti */
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.info-block-section:hover .info-block-image img {
+    transform: scale(1.02); /* Leggero effetto zoom al passaggio del mouse sulla sezione */
+}
+
+/* 6. Stile Testo */
+.info-block-title {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.info-block-desc {
+    color: var(--text-light); /* Testo chiaro su sfondo scuro */
+    font-size: 1.5rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* 7. Classe per invertire l'ordine (Desktop) */
+@media (min-width: 865px) {
+    .block-reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+/* ==============================
+   RESPONSIVE (Mobile)
+============================== */
+@media (max-width: 864px) {
+    .info-block-container {
+        flex-direction: column !important; /* Incolonna tutto */
+        text-align: center;
+        padding: 4rem 5%;
+    }
+
+    .info-block-image,
+    .info-block-content {
+        width: 100%; /* Larghezza piena su mobile */
+    }
+
+    .info-block-image {
+        margin-bottom: 2rem; /* Spazio sotto l'immagine quando incolonnata */
+    }
+    
+    .info-block-title {
+        font-size: 1.8rem;
+    }
+}
 /* ==============================
    5. COMPONENTI (Bottoni, Card, Form)
 ============================== */
 /* Bottoni */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 0.8rem 1.8rem;
+    padding: clamp(0.8rem, 1.5vw, 1rem);
     border-radius: 50px; /* Look a pillola molto elegante */
     font-weight: 600;
     text-align: center;
@@ -364,6 +480,7 @@ section {
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 600px; /* Altezza fissa per mantenere uniformità, l'immagine si adatterà */
 }
 
 .feature-card:hover {
@@ -497,7 +614,7 @@ section {
     box-shadow: 0 0 0 4px rgba(89, 0, 255, 0.2);
 }
 button.contact-btn{
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 100%;
     margin: 0 auto;
     display: block;

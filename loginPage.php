@@ -6,7 +6,7 @@ include("includes/menu.php");
 ?>
   <section class="contact" >
         <div class="section-header contact-header fade-in-section">
-            <h2 class="section-title">Login ad area riservata</h2>
+            <h2 class="section-title">Login Area riservata</h2>
         </div>
 
         <form action="admin/login_act.php" method="post" class="contact-form fade-in-section">
